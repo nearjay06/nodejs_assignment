@@ -117,9 +117,46 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../src/index.js":[function(require,module,exports) {
+})({"../src/app/TodayDate.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.date = exports.today = void 0;
+var today = new Date();
+exports.today = today;
+var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+exports.date = date;
+console.log(new Date());
+},{}],"../src/app/Obj.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Person = void 0;
+var Person = {
+  Name: 'james',
+  Birthyear: '1967',
+  Age: '56'
+};
+exports.Person = Person;
+var values = Object.values(Person);
+console.log(values);
+},{}],"../src/index.js":[function(require,module,exports) {
+"use strict";
+
+var _TodayDate = require("../src/app/TodayDate");
+
+var _Obj = require("../src/app/Obj");
+
+console.log(_TodayDate.date);
+console.log(_TodayDate.today);
+console.log(_Obj.Person.Name);
+console.log(_Obj.Person.Birthyear);
+console.log(_Obj.Person.Age);
+},{"../src/app/TodayDate":"../src/app/TodayDate.js","../src/app/Obj":"../src/app/Obj.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -147,7 +184,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41883" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35117" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
