@@ -1,0 +1,29 @@
+{
+  "name": "es6-nodejs",
+  "version": "1.0.0",
+  "description": "Practicing node js",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel /home/joan/Desktop/es6-nodejs/public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nearjay06/nodejs_assignment.git"
+  },
+  "author": "joan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nearjay06/nodejs_assignment/issues"
+  },
+  "homepage": "https://github.com/nearjay06/nodejs_assignment#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0"
+  }
+}
