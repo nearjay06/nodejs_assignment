@@ -5,8 +5,9 @@ let myDiv = document.querySelector('#root');
 let mySpan = document.createElement('span');
 myDiv.appendChild(mySpan);
 mySpan.className = "lala";
-mySpan.innerHTML = "Today is " + today;
-
+// mySpan.innerHTML = "Today is " + today;
+// mySpan.innerHTML = "Person.Name " + " Person.Birthyear " + "Person.Age ";
+mySpan.innerHTML =`${today} <br><br> Name:${Person.Name}<br><br> Date of Birth: ${Person.Birthyear}<br><br> Age: ${Person.Age()}`
 
 
 

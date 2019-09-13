@@ -137,8 +137,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Person = void 0;
 var Person = {
-  Name: 'james',
-  Birthyear: '1967',
+  Name: 'Lila',
+  Birthyear: '1997',
   Age: function getAge() {
     var today = new Date();
     var todayYear = today.getFullYear();
@@ -158,8 +158,10 @@ var _Obj = require("../src/app/Obj");
 var myDiv = document.querySelector('#root');
 var mySpan = document.createElement('span');
 myDiv.appendChild(mySpan);
-mySpan.className = "lala";
-mySpan.innerHTML = "Today is " + _TodayDate.today;
+mySpan.className = "lala"; // mySpan.innerHTML = "Today is " + today;
+// mySpan.innerHTML = "Person.Name " + " Person.Birthyear " + "Person.Age ";
+
+mySpan.innerHTML = "".concat(_TodayDate.today, " <br><br> Name:").concat(_Obj.Person.Name, "<br><br> Date of Birth: ").concat(_Obj.Person.Birthyear, "<br><br> Age: ").concat(_Obj.Person.Age());
 console.log(_TodayDate.date);
 console.log(_TodayDate.today);
 console.log(_Obj.Person.Name);
@@ -193,7 +195,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37021" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35607" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
