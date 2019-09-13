@@ -139,11 +139,15 @@ exports.Person = void 0;
 var Person = {
   Name: 'james',
   Birthyear: '1967',
-  Age: '56'
+  Age: function getAge() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var Age = todayYear - this.Birthyear;
+    return Age;
+  }
 };
 exports.Person = Person;
-var values = Object.values(Person);
-console.log(values);
+console.log(Person);
 },{}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -189,7 +193,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33291" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42623" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
