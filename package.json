@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src -d lib",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel /home/joan/Desktop/es6-nodejs/public/index.html"    
+    "start": "parcel /home/joan/Desktop/es6-nodejs/public/index.html --port 8000"    
   },
   "repository": {
     "type": "git",
