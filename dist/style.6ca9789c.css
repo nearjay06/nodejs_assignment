@@ -1,15 +1,21 @@
 body{
     background-color: lightcoral;
+    
 }
 
 h1{
     font-family: Goergia;
     font-weight: bold;
     font-size: 30px;
+    padding-top:5px;
+    padding-bottom: 5px;
 }
 
 .lala{
     background-color: plum;
+    padding:20px;
+    border-radius:10px;
+    
 }
 
 /*# sourceMappingURL=/style.6ca9789c.css.map */
