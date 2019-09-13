@@ -151,6 +151,11 @@ var _TodayDate = require("../src/app/TodayDate");
 
 var _Obj = require("../src/app/Obj");
 
+var myDiv = document.querySelector('#root');
+var mySpan = document.createElement('span');
+myDiv.appendChild(mySpan);
+mySpan.className = "lala";
+mySpan.innerHTML = "Today is " + _TodayDate.today;
 console.log(_TodayDate.date);
 console.log(_TodayDate.today);
 console.log(_Obj.Person.Name);
@@ -184,7 +189,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35117" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33841" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
